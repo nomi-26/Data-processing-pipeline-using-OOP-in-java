@@ -81,31 +81,31 @@ And many more practical real world problems could be solved.
 2) OOP logic codes
 
 ## File structure
-project/
-├── backend/
-│   ├── Main.java                        ← default package, entry point
-│   └── src/
-│       ├── server/
-│       │   ├── PipelineHandler.java     ← handles HTTP requests
-│       │   └── CORSHandler.java         ← allows frontend to talk to backend
-│       ├── pipeline/
-│       │   └── Pipeline.java            ← chains nodes together
-│       ├── node/
-│       │   ├── Node.java                ← abstract base
-│       │   ├── FilterNode.java
-│       │   ├── TransformNode.java
-│       │   ├── AggregateNode.java
-│       │   └── OutputNode.java
-│       └── data/
-│           ├── DataItem.java            ← abstract base
-│           ├── NumberItem.java (not used since csv is considered object)
-│           ├── StringItem.java (not used since csv is considered object)
-│           └── ObjectItem.java
-└── frontend/
-    ├── index.html
-    ├── style.css
-    ├── app.js
-    └── csvParser.js
+project/ \
+├── backend/ \
+│   ├── Main.java                        ← default package, entry point\
+│   └── src/ \
+│       ├── server/ \
+│       │   ├── PipelineHandler.java     ← handles HTTP requests \
+│       │   └── CORSHandler.java         ← allows frontend to talk to backend \
+│       ├── pipeline/ \
+│       │   └── Pipeline.java            ← chains nodes together \
+│       ├── node/ \
+│       │   ├── Node.java                ← abstract base \
+│       │   ├── FilterNode.java \
+│       │   ├── TransformNode.java \
+│       │   ├── AggregateNode.java \
+│       │   └── OutputNode.java \
+│       └── data/ \ 
+│           ├── DataItem.java            ← abstract base \
+│           ├── NumberItem.java (not used since csv is considered object) \
+│           ├── StringItem.java (not used since csv is considered object) \ 
+│           └── ObjectItem.java \
+└── frontend/ \ 
+    ├── index.html \
+    ├── style.css \
+    ├── app.js \
+    └── csvParser.js \
 
 
 
