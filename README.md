@@ -161,7 +161,7 @@ gradle --version
 ### Step 1 — Clone the repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Data-processing-pipeline-using-OOP-in-java.git
+git clone https://github.com/nomi-26/Data-processing-pipeline-using-OOP-in-java.git
 cd Data-processing-pipeline-using-OOP-in-java
 ```
 
