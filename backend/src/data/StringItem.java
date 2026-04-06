@@ -1,4 +1,4 @@
-package backend.src.data;
+package src.data;
 
 public class StringItem extends DataItem{
     private String value;

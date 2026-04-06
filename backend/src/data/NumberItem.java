@@ -1,4 +1,4 @@
-package backend.src.data;
+package src.data;
 
 public class NumberItem extends DataItem{
     private double value;

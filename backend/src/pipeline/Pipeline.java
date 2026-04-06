@@ -1,6 +1,6 @@
-package backend.src.pipeline;
+package src.pipeline;
 
-import backend.src.node.Node;
+import src.node.Node;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

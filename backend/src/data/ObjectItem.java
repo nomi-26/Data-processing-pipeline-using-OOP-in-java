@@ -1,4 +1,4 @@
-package backend.src.data;
+package src.data;
 
 import java.util.Map;
 

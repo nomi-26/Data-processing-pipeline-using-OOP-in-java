@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Pipeline — OOP in Java</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+    <div class="app">
+
+        <header>
+            <h1>Data Pipeline</h1>
+            <p>// Object-Oriented Processing Engine · Java + HTML</p>
+        </header>
+
+        <!-- Step 1: Upload CSV -->
+        <div class="section">
+            <div class="section-title">01 — Upload CSV</div>
+            <div class="upload-area">
+                <input type="file" id="csvFile" accept=".csv" />
+                <div class="upload-icon">📂</div>
+                <p>Click to upload a <strong>.csv</strong> file</p>
+                <p style="font-size:0.78rem; margin-top:4px;">e.g. students.csv, products.csv</p>
+            </div>
+            <div class="status" id="csvStatus"></div>
+
+            <div id="previewSection">
+                <div class="section-title" style="margin-top:20px; margin-bottom:12px;">Preview (first 5 rows)</div>
+                <div class="table-wrap">
+                    <table id="previewTable"></table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Build Pipeline -->
+        <div class="section">
+            <div class="section-title">02 — Build Pipeline</div>
+
+            <div class="node-builder">
+                <div>
+                    <label>Node Type</label>
+                    <select id="nodeType">
+                        <option value="filter">Filter</option>
+                        <option value="transform">Transform</option>
+                        <option value="aggregate">Aggregate</option>
+                        <option value="output">Output</option>
+                    </select>
+                </div>
+                <div id="nodeConfig"></div>
+                <div>
+                    <label>&nbsp;</label>
+                    <button class="btn btn-primary" id="addNodeBtn">+ Add Node</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Pipeline View -->
+        <div class="section">
+            <div class="section-title">03 — Pipeline</div>
+            <div id="pipelineSteps">
+                <p class="hint">No nodes added yet. Add nodes above.</p>
+            </div>
+        </div>
+
+        <!-- Step 4: Run -->
+        <div class="section run-section">
+            <div class="section-title">04 — Run</div>
+            <button class="btn btn-run" id="runBtn">▶ Run Pipeline</button>
+        </div>
+
+        <!-- Step 5: Results -->
+        <div id="resultsSection">
+            <div class="section-title" style="margin-bottom:16px;">05 — Results</div>
+            <div id="results"></div>
+        </div>
+
+    </div>
+
+    <script src="csvParser.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

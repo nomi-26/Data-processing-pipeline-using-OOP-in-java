@@ -1,4 +1,4 @@
-package backend.src.node;
+package src.node;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +18,9 @@ public class TransformNode extends Node {
     public List<Map<String, Object>> process(List<Map<String, Object>> data) {
         List<Map<String, Object>> result = new ArrayList<>();
         for (Map<String, Object> row : data) {
-            Map<String, Object> newRow = new HashMap<>(row); // copy row
+            Map<String, Object> newRow = new HashMap<>(row); 
             Object val = newRow.get(field);
-            newRow.put(field, transform(val));               // replace field with transformed value
-            result.add(newRow);
+            newRow.put(field, transform(val));              
         }
         return result;
     }
