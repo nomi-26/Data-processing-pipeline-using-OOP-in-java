@@ -1,3 +1,4 @@
+//Erros in this file is resolved by gradle build process
 package src.server;
 
 import src.node.*;
