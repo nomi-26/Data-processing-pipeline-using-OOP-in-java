@@ -1,7 +1,8 @@
 import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import app.src.main.java.server.*;
+import main.java.server.*;
+
 
 public class Main {
     public static void main(String[] args) throws IOException {
