@@ -1,4 +1,4 @@
-package backend.src.data;
+package main.java.data;
 
 public abstract class DataItem {
     public abstract Object getValue();

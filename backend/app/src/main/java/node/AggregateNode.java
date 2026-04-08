@@ -1,4 +1,4 @@
-package backend.src.node;
+package main.java.node;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,7 +1,7 @@
-package backend.src.server;
+package main.java.server;
 
-import backend.src.node.*;
-import backend.src.pipeline.Pipeline;
+import main.java.node.*;
+import main.java.pipeline.Pipeline;
 import com.google.gson.*;
 import com.sun.net.httpserver.HttpExchange;
 import java.io.*;
