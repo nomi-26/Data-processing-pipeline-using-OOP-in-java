@@ -111,6 +111,9 @@ project/
 ```
 
 ---
+<img width="1408" height="768" alt="mermaid image" src="https://github.com/user-attachments/assets/746cd797-db5f-45d8-a00b-ac86a29cb35f" />
+
+---
 
 ## Prerequisites
 
