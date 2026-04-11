@@ -2,6 +2,12 @@ package main.java.server;
 
 import main.java.node.*;
 import main.java.pipeline.Pipeline;
+import main.java.node.AggregateNode;
+import main.java.node.DeriveNode;
+import main.java.node.FilterNode;
+import main.java.node.OutputNode;
+import main.java.node.TransformNode;
+
 import com.google.gson.*;
 import com.sun.net.httpserver.HttpExchange;
 import java.io.*;
@@ -77,6 +83,16 @@ public class PipelineHandler extends CORSHandler {
                     String aggField = nodeJson.get("field").getAsString();
                     String aggOp    = nodeJson.get("op").getAsString();
                     pipeline.addNode(new AggregateNode(aggField, aggOp));
+                    break;
+                                
+                case "derive":
+                    String deriveField   = nodeJson.get("field").getAsString();
+                    String deriveOp      = nodeJson.get("op").getAsString();
+                    Object deriveVal     = parseValue(nodeJson.get("value"));
+                    String newColumn     = nodeJson.get("newColumn").getAsString();
+                    Object trueVal       = parseValue(nodeJson.get("trueVal"));
+                    Object falseVal      = parseValue(nodeJson.get("falseVal"));
+                    pipeline.addNode(new DeriveNode(deriveField, deriveOp, deriveVal, newColumn, trueVal, falseVal));
                     break;
 
                 case "output":

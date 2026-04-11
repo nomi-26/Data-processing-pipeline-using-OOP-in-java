@@ -410,3 +410,28 @@ select:focus, input:focus {
 .run-section {
     margin-top: 8px;
 }
+
+/* Derive node color */
+.pipeline-node[data-type="derive"] { border-left: 3px solid #c96bff; }
+.pipeline-node[data-type="derive"] .node-label { color: #c96bff; }
+
+/* Download button */
+.btn-download {
+    background: transparent;
+    border: 2px solid var(--accent3);
+    color: var(--accent3);
+    padding: 12px 28px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 12px;
+    cursor: pointer;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.btn-download:hover {
+    background: rgba(107,255,184,0.08);
+    transform: translateY(-1px);
+}

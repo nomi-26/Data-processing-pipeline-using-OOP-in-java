@@ -80,6 +80,17 @@ public class PipelineHandler extends CORSHandler {
                     pipeline.addNode(new AggregateNode(aggField, aggOp));
                     break;
 
+                case "derive":
+                    String deriveField   = nodeJson.get("field").getAsString();
+                    String deriveOp      = nodeJson.get("op").getAsString();
+                    Object deriveVal     = parseValue(nodeJson.get("value"));
+                    String newColumn     = nodeJson.get("newColumn").getAsString();
+                    Object trueVal       = parseValue(nodeJson.get("trueVal"));
+                    Object falseVal      = parseValue(nodeJson.get("falseVal"));
+                    pipeline.addNode(new DeriveNode(deriveField, deriveOp, deriveVal, newColumn, trueVal, falseVal));
+                    break;
+
+
                 case "output":
                     pipeline.addNode(new OutputNode());
                     break;
